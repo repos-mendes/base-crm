@@ -12,6 +12,7 @@
     "dev": "pnpm -r --parallel run dev",
     "lint": "eslint .",
     "lint:vocab": "node scripts/lint-vocabulario.mjs",
+    "ferramentas": "node scripts/verificar-ferramentas.mjs",
     "typecheck": "pnpm -r run typecheck",
     "test": "pnpm -r run test",
     "turbo:build": "turbo run build",
@@ -20,7 +21,7 @@
     "turbo:test": "turbo run test",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "check": "pnpm run lint && pnpm run lint:vocab && pnpm run typecheck && pnpm run test"
+    "check": "pnpm run ferramentas && pnpm run lint && pnpm run lint:vocab && pnpm run typecheck && pnpm run test"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
