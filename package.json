@@ -1,0 +1,35 @@
+{
+  "name": "base-crm",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@12.4.2",
+  "engines": {
+    "node": ">=22.11.0"
+  },
+  "scripts": {
+    "//": "Os scripts padrão usam `pnpm -r` porque a política de grupo desta máquina bloqueia arquivos .cmd, e o turbo invoca pnpm.cmd. Os scripts `turbo:*` são os do CI (Linux), onde o turbo roda e traz cache e grafo de dependências.",
+    "build": "pnpm -r run build",
+    "dev": "pnpm -r --parallel run dev",
+    "lint": "eslint .",
+    "lint:vocab": "node scripts/lint-vocabulario.mjs",
+    "typecheck": "pnpm -r run typecheck",
+    "test": "pnpm -r run test",
+    "turbo:build": "turbo run build",
+    "turbo:lint": "turbo run lint",
+    "turbo:typecheck": "turbo run typecheck",
+    "turbo:test": "turbo run test",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check": "pnpm run lint && pnpm run lint:vocab && pnpm run typecheck && pnpm run test"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/node": "24.13.6",
+    "eslint": "10.11.0",
+    "eslint-config-prettier": "10.1.8",
+    "prettier": "3.9.8",
+    "turbo": "2.11.2",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.70.0"
+  }
+}

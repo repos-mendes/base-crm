@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.next/
+.open-next/
+.turbo/
+.wrangler/
+coverage/
+pnpm-lock.yaml
+supabase/config.toml
+
+# Documentos de decisão: formatados à mão, com diagramas e tabelas alinhadas.
+/*.md

@@ -1,0 +1,21 @@
+{
+  "name": "@base-crm/config",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./brand": "./src/brand.ts",
+    "./vocabulario": "./src/vocabulario.ts",
+    "./tsconfig/base.json": "./tsconfig/base.json",
+    "./tsconfig/library.json": "./tsconfig/library.json",
+    "./tsconfig/react.json": "./tsconfig/react.json",
+    "./eslint": "./src/eslint.js"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3"
+  }
+}
