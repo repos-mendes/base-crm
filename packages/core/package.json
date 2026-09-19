@@ -1,0 +1,17 @@
+{
+  "name": "@base-crm/core",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@base-crm/config": "workspace:*",
+    "typescript": "5.9.3"
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "extends": "@base-crm/config/tsconfig/library.json",
+  "include": ["src/**/*.ts"]
+}
